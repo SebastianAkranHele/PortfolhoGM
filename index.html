@@ -7,6 +7,7 @@
      <!-- CSS -->
     <link rel="stylesheet" href="style.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navbar Responsiva com Menu Hamburguer -->
@@ -150,28 +151,26 @@
         <h2 class="section-title">Entre em Contato</h2>
         <div class="contact-container">
             
-            <!-- FORM NETLIFY -->
-            <form class="contact-form" name="contato" method="POST" data-netlify="true">
-                <!-- campo oculto obrigatório -->
-                <input type="hidden" name="form-name" value="contato">
+           <form class="contact-form">
+    <div class="form-group">
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+    <div class="form-group">
+        <label for="message">Sua Mensagem</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
 
-                <div class="form-group">
-                    <label for="message">Sua Mensagem</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
+    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+    <p id="form-status"></p> <!-- Mensagem de status -->
+</form>
 
-                <button type="submit" class="submit-btn">Enviar Mensagem</button>
-            </form>
             
             <!-- INFO DE CONTATO -->
             <div class="contact-info">
@@ -287,6 +286,7 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 <!-- JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js" defer></script>  
     <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
