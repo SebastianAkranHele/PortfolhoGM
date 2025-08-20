@@ -144,27 +144,36 @@
         </div>
     </section>
 
-   <!-- Contato -->
+<!-- Contato -->
 <section id="contact" class="contact">
     <div class="container">
         <h2 class="section-title">Entre em Contato</h2>
         <div class="contact-container">
-            <form class="contact-form">
+            
+            <!-- FORM NETLIFY -->
+            <form class="contact-form" name="contato" method="POST" data-netlify="true">
+                <!-- campo oculto obrigatório -->
+                <input type="hidden" name="form-name" value="contato">
+
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="name" required>
                 </div>
+
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
+
                 <div class="form-group">
                     <label for="message">Sua Mensagem</label>
-                    <textarea id="message" required></textarea>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
+
                 <button type="submit" class="submit-btn">Enviar Mensagem</button>
             </form>
             
+            <!-- INFO DE CONTATO -->
             <div class="contact-info">
                 <div class="contact-info-item">
                     <div class="contact-icon">📧</div>
@@ -192,11 +201,10 @@
                     <a href="https://www.linkedin.com/in/gaspar-manuel-a7a570203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    
                     <a href="https://www.facebook.com/share/1D4orHQx45/?mibextid=wwXIfr" class="social-link">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                     <a href="https://wa.me/24493635164" class="social-link">
+                    <a href="https://wa.me/24493635164" class="social-link">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="#" class="social-link">
