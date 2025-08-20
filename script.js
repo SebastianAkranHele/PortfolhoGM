@@ -26,6 +26,13 @@ window.onload = function() {
         event.preventDefault();
         statusMsg.textContent = "Enviando mensagem... ⏳";
         statusMsg.style.color = "blue";
+        
+        // Adiciona a data/hora ao form (para o {{tempo}})
+        const tempoInput = document.createElement("input");
+        tempoInput.type = "hidden";
+        tempoInput.name = "tempo";
+        tempoInput.value = new Date().toLocaleString(); 
+        form.appendChild(tempoInput);
 
         // Enviar para TI (notificação interna)
         emailjs.sendForm('service_yyh7pwq', 'template_y2f9bfn', this)
